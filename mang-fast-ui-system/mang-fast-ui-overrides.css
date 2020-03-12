@@ -1,0 +1,124 @@
+@import url('./mang-fast-ui-custom-fonts.css');
+@import url('./mang-fast-ui-tokens/mang-border-system.css');
+@import url('./mang-fast-ui-tokens/mang-color-system.css');
+@import url('./mang-fast-ui-tokens/mang-font-system.css');
+@import url('./mang-fast-ui-tokens/mang-grid-system.css');
+@import url('./mang-fast-ui-tokens/mang-shadow-system.css');
+@import url('./mang-fast-ui-tokens/mang-animations-system.css');
+
+/*---------------------------*/
+/*---------OVERRIDES---------*/
+/*---------------------------*/
+
+
+/*---------fonts---------*/
+:root {
+	
+	/*font-family*/
+	--mang-font-family-primary: 'Playfair Display', serif;
+	--mang-font-family-base: 'Rajdhani', sans-serif;
+
+	/*font-modifier*/
+	--mang-mod-font-size: 1.15;
+	--mang-mod-line-height-header: 1.25;
+	--mang-mod-line-height-secondary: 1.4;
+	
+	--mang-mod-margin-top: 0.8; 
+	--mang-mod-margin-bottom: 0.2;
+	
+	/*font-size*/
+	--mang-font-size-secondary-sm: 16px;
+	--mang-font-size-secondary-md: 18px;
+	--mang-font-size-secondary-lg: 20px;
+	
+	/*font-weight-*/
+	--mang-font-weight-black: 900;
+	--mang-font-weight-bold: 600;
+	--mang-font-weight-regular: 300;
+			
+}
+
+
+/*---------colors---------*/
+
+:root {
+	
+	/*Primarios*/		
+	--mang-rgb-primary-01: 226, 0, 26;		/*#e2001a*/
+	--mang-rgb-primary-02: 34, 32, 95;		/*#22205f*/
+	
+	/*Secundarios*/				
+	--mang-rgb-secondary-01: 34, 94, 171;	/*#239D45*/
+	--mang-rgb-secondary-02: 34, 94, 171;	/*#239D45*/
+	--mang-rgb-secondary-03: 34, 94, 171;	/*#239D45*/
+	--mang-rgb-secondary-04: 34, 94, 171;	/*#239D45*/
+	--mang-rgb-secondary-05: 34, 94, 171;	/*#239D45*/
+				
+	/*Grises*/
+	--mang-rgb-grey-01:	122, 124, 125;		/*#7a7c7d*/
+	--mang-rgb-grey-02:	221, 221, 221;		/*#dddddd*/
+	--mang-rgb-grey-03:	245, 245, 245;		/* #f5f5f5*/
+	--mang-rgb-grey-04:	245, 245, 245;		/* #f5f5f5*/
+	--mang-rgb-grey-05:	245, 245, 245;		/* #f5f5f5*/
+	
+	/*Opacities*/
+	--mang-a-opacity-01: 1;
+	--mang-a-opacity-02: 0.97;
+	--mang-a-opacity-03: 0.77;
+}
+
+.bg-color-gradient-01 {
+	background: 
+		linear-gradient(90deg, 
+		var(--mang-color-primary-01) 0%, 
+		var(--mang-color-primary-02) 100%);
+}
+.bg-color-gradient-02 {
+	background: 
+		linear-gradient(90deg, 
+		var(--mang-color-secondary-01) 0%, 
+		var(--mang-color-secondary-02) 35%, 
+		var(--mang-color-secondary-03) 100%);
+}
+.bg-color-gradient-03 {
+	background: 
+		linear-gradient(90deg, 
+		var(--mang-color-primary-01) 0%, 
+		var(--mang-color-secondary-03) 35%, 
+		var(--mang-color-secondary-05) 100%);
+}
+.bg-color-gradient-04 {
+	background: 
+		linear-gradient(90deg, 
+		var(--mang-color-secondary-03) 0%, 
+		var(--mang-color-secondary-04) 35%, 
+		var(--mang-color-secondary-05) 100%);
+}
+
+
+/*---------border---------*/
+
+:root {
+	--mang-border-width-01: solid 1px;
+	--mang-border-width-02: solid 2px;
+	--mang-border-width-03: solid 3px;
+	--mang-border-width-04: solid 4px;
+	--mang-border-width-05: solid 5px;
+	
+	--mang-border-radius-01: 2px;
+	--mang-border-radius-02: 3px;
+	--mang-border-radius-03: 5px;
+	--mang-border-radius-04: 7px;
+	--mang-border-radius-05: 9px;
+}
+
+
+/*---------shadows---------*/
+
+:root {
+	--mang-box-shadow-01: 0px 10px 10px 0px rgba(0,0,0,0.15);
+	--mang-box-shadow-02: 0px 10px 10px 5px rgba(0,0,0,0.13);
+	--mang-box-shadow-03: 0px 10px 15px 10px rgba(0,0,0,0.11);
+	--mang-box-shadow-04: 0px 10px 15px 15px rgba(0,0,0,0.09);
+	--mang-box-shadow-05: 0px 10px 20px 17px rgba(0,0,0,0.07);
+}

@@ -1,0 +1,27 @@
+/*-------------------------*/
+/*---------SHADOWS---------*/
+/*-------------------------*/
+
+:root {
+	--mang-box-shadow-01: 0px 10px 10px 0px rgba(0,0,0,0.15);
+	--mang-box-shadow-02: 0px 10px 10px 5px rgba(0,0,0,0.13);
+	--mang-box-shadow-03: 0px 10px 15px 10px rgba(0,0,0,0.11);
+	--mang-box-shadow-04: 0px 10px 15px 15px rgba(0,0,0,0.09);
+	--mang-box-shadow-05: 0px 10px 20px 17px rgba(0,0,0,0.07);
+}
+
+.mang-shadow-01 {
+	box-shadow: var(--mang-box-shadow-01);
+}
+.mang-shadow-02 {
+	box-shadow: var(--mang-box-shadow-02);
+}
+.mang-shadow-03 {
+	box-shadow: var(--mang-box-shadow-03);
+}
+.mang-shadow-04 {
+	box-shadow: var(--mang-box-shadow-04);
+}
+.mang-shadow-05 {
+	box-shadow: var(--mang-box-shadow-05);
+}

@@ -1,0 +1,288 @@
+/*--------------------------------------*/
+/*------------BASE INTERFACE------------*/
+/*--------------------------------------*/
+
+:root {
+	
+	/*Primarios*/		
+	--mang-rgb-primary-01: 226, 0, 26;		/*#e2001a*/
+	--mang-rgb-primary-02: 34, 32, 95;		/*#22205f*/
+	
+	/*Secundarios*/				
+	--mang-rgb-secondary-01: 34, 94, 171;	/*#239D45*/
+	--mang-rgb-secondary-02: 34, 94, 171;	/*#239D45*/
+	--mang-rgb-secondary-03: 34, 94, 171;	/*#239D45*/
+	--mang-rgb-secondary-04: 34, 94, 171;	/*#239D45*/
+	--mang-rgb-secondary-05: 34, 94, 171;	/*#239D45*/
+				
+	/*Grises*/
+	--mang-rgb-grey-01:	122, 124, 125;		/*#7a7c7d*/
+	--mang-rgb-grey-02:	221, 221, 221;		/*#dddddd*/
+	--mang-rgb-grey-03:	245, 245, 245;		/* #f5f5f5*/
+	--mang-rgb-grey-04:	245, 245, 245;		/* #f5f5f5*/
+	--mang-rgb-grey-05:	245, 245, 245;		/* #f5f5f5*/
+				
+	/*black & white*/		
+	--mang-rgb-white: 255, 255, 255;		/*#ffffff*/
+	--mang-rgb-black: 0, 0, 0;				/*#000000*/
+	
+	/*Opacities*/
+	--mang-a-opacity-01: 1;
+	--mang-a-opacity-02: 0.97;
+	--mang-a-opacity-03: 0.77;
+}
+
+
+/*----------------------------*/
+/*--------system logic--------*/
+/*----------------------------*/
+
+:root {
+	
+	/*------COLOR-------*/
+	
+	/*Primarios*/
+	--mang-color-primary-01: rgba(var(--mang-rgb-primary-01), var(--mang-a-opacity-01));
+	--mang-color-primary-02: rgba(var(--mang-rgb-primary-02), var(--mang-a-opacity-01));
+	
+	/*Secundarios*/
+	--mang-color-secondary-01: rgba(var(--mang-rgb-secondary-01), var(--mang-a-opacity-01));
+	--mang-color-secondary-02: rgba(var(--mang-rgb-secondary-02), var(--mang-a-opacity-01));
+	--mang-color-secondary-03: rgba(var(--mang-rgb-secondary-03), var(--mang-a-opacity-01));
+	--mang-color-secondary-04: rgba(var(--mang-rgb-secondary-04), var(--mang-a-opacity-01));
+	--mang-color-secondary-05: rgba(var(--mang-rgb-secondary-05), var(--mang-a-opacity-01));
+
+	/*Grises*/
+	--mang-color-grey-01: rgba(var(--mang-rgb-grey-01), var(--mang-a-opacity-01));
+	--mang-color-grey-02: rgba(var(--mang-rgb-grey-02), var(--mang-a-opacity-01));
+	--mang-color-grey-03: rgba(var(--mang-rgb-grey-03), var(--mang-a-opacity-01));
+	--mang-color-grey-04: rgba(var(--mang-rgb-grey-04), var(--mang-a-opacity-01));
+	--mang-color-grey-05: rgba(var(--mang-rgb-grey-05), var(--mang-a-opacity-01));
+
+
+	/*black & white*/
+	--mang-color-white: rgba(var(--mang-rgb-white), var(--mang-a-opacity-01));
+	--mang-color-black: rgba(var(--mang-rgb-black), var(--mang-a-opacity-01));
+	
+	
+	/*-------OVERLAY------*/
+	
+	/*Overlay colors*/
+	--mang-rgb-overlay-01: var(--mang-rgb-secondary-03);
+	--mang-rgb-overlay-02: var(--mang-rgb-secondary-04);
+	--mang-rgb-overlay-03: var(--mang-rgb-secondary-05);
+	
+	--mang-overlay-white-01: rgba(var(--mang-rgb-white), var(--mang-a-opacity-01));
+	--mang-overlay-black-01: rgba(var(--mang-rgb-black), var(--mang-a-opacity-01));
+	
+	--mang-overlay-white-02: rgba(var(--mang-rgb-white), var(--mang-a-opacity-02));
+	--mang-overlay-black-02: rgba(var(--mang-rgb-black), var(--mang-a-opacity-02));
+	
+	--mang-overlay-white-03: rgba(var(--mang-rgb-white), var(--mang-a-opacity-03));
+	--mang-overlay-black-03: rgba(var(--mang-rgb-black), var(--mang-a-opacity-03));
+	
+
+	/*-------COLOR OVERLAY------*/
+	
+	--mang-color-01-overlay-01: rgba(var(--mang-rgb-over-color-01), var(--mang-a-opacity-01));
+	--mang-color-01-overlay-02: rgba(var(--mang-rgb-over-color-01), var(--mang-a-opacity-02));
+	--mang-color-01-overlay-03: rgba(var(--mang-rgb-over-color-01), var(--mang-a-opacity-03));
+	
+	--mang-color-02-overlay-01: rgba(var(--mang-rgb-over-color-02), var(--mang-a-opacity-01));
+	--mang-color-02-overlay-02: rgba(var(--mang-rgb-over-color-02), var(--mang-a-opacity-02));
+	--mang-color-02-overlay-03: rgba(var(--mang-rgb-over-color-02), var(--mang-a-opacity-03));
+	
+	--mang-color-03-overlay-01: rgba(var(--mang-rgb-over-color-03), var(--mang-a-opacity-01));
+	--mang-color-03-overlay-02: rgba(var(--mang-rgb-over-color-03), var(--mang-a-opacity-02));
+	--mang-color-03-overlay-03: rgba(var(--mang-rgb-over-color-03), var(--mang-a-opacity-03));
+	
+}
+/*
+:root {
+
+	/*-------DEGREES--------*/
+/*			
+	--mang-grad-angle-01: 90deg;
+	--mang-grad-angle-02: 45deg;
+	--mang-grad-angle-03: 0deg;
+	--mang-grad-angle-04: 180deg;
+	
+	/*-----middle gradient-----*/
+/*	
+	--mang-grad-middle-01: 15%;
+	--mang-grad-middle-02: 35%;
+	--mang-grad-middle-03: 50%;
+	--mang-grad-middle-04: 65%;
+	--mang-grad-middle-05: 85%;
+
+
+	/*------GRADIENTS-------*/
+/*		
+	--mang-gradient-01: linear-gradient(var(--mang-grad-angle-01), var(--mang-color-primary-02) 0%, var(--mang-color-primary-02) var(--mang-grad-middle-02), var(--mang-color-primary-01) 100%);
+	--mang-gradient-02: linear-gradient(var(--mang-grad-angle-01), var(--mang-color-primary-02) 0%, var(--mang-color-primary-02) var(--mang-grad-middle-02), var(--mang-color-secondary-02) 100%);
+	--mang-gradient-03: linear-gradient(var(--mang-grad-angle-01), var(--mang-color-primary-02) 0%, var(--mang-color-primary-02) var(--mang-grad-middle-02), var(--mang-color-secondary-02) 100%);
+	--mang-gradient-04: linear-gradient(var(--mang-grad-angle-01), var(--mang-color-primary-02) 0%, var(--mang-color-primary-02) var(--mang-grad-middle-02), var(--mang-color-secondary-02) 100%);
+	--mang-gradient-05: linear-gradient(var(--mang-grad-angle-01), var(--mang-color-primary-02) 0%, var(--mang-color-primary-02) var(--mang-grad-middle-02), var(--mang-color-secondary-02) 100%);
+
+}
+*/
+
+
+/*---------------------*/
+/*--------STYLES-------*/
+/*---------------------*/
+
+
+/*fonts*/
+
+.font-color-primary-01 {
+	color: var(--mang-color-primary-01);
+}
+.font-color-primary-02 {
+	color: var(--mang-color-primary-02);
+}
+
+.font-color-secondary-01 {
+	color: var(--mang-color-secondary-01);
+}
+.font-color-secondary-02 {
+	color: var(--mang-color-secondary-02);
+}
+.font-color-secondary-03 {
+	color: var(--mang-color-secondary-03);
+}
+.font-color-secondary-04 {
+	color: var(--mang-color-secondary-04);
+}
+.font-color-secondary-05 {
+	color: var(--mang-color-secondary-05);
+}
+
+.font-color-grey-01 {
+	color: var(--mang-color-grey-01);
+}
+.font-color-grey-02 {
+	color: var(--mang-color-grey-02);
+}
+.font-color-grey-03 {
+	color: var(--mang-color-grey-03);
+}
+.font-color-grey-04 {
+	color: var(--mang-color-grey-04);
+}
+.font-color-grey-05 {
+	color: var(--mang-color-grey-05);
+}
+
+.font-color-black {
+	color: var(--mang-color-black);
+}
+.font-color-white {
+	color: var(--mang-color-white);
+}
+
+
+/*background-color*/
+
+.bg-color-primary-01 {
+	background-color: var(--mang-color-primary-01);
+}
+.bg-color-primary-02 {
+	background-color: var(--mang-color-primary-02);
+}
+
+.bg-color-secondary-01 {
+	background-color: var(--mang-color-secondary-01);
+}
+.bg-color-secondary-02 {
+	background-color: var(--mang-color-secondary-02);
+}
+.bg-color-secondary-03 {
+	background-color: var(--mang-color-secondary-03);
+}
+.bg-color-secondary-04 {
+	background-color: var(--mang-color-secondary-04);
+}
+.bg-color-secondary-05 {
+	background-color: var(--mang-color-secondary-05);
+}
+
+
+.bg-color-grey-01 {
+	background-color: var(--mang-color-grey-01);
+}
+.bg-color-grey-02 {
+	background-color: var(--mang-color-grey-02);
+}
+.bg-color-grey-03 {
+	background-color: var(--mang-color-grey-03);
+}
+.bg-color-grey-04 {
+	background-color: var(--mang-color-grey-04);
+}
+.bg-color-grey-05 {
+	background-color: var(--mang-color-grey-05);
+}
+
+
+.bg-color-01-overlay-01 {
+	background-color: var(--mang-color-01-overlay-01);
+}
+.bg-color-01-overlay-02 {
+	background-color: var(--mang-color-01-overlay-02);	
+}
+.bg-color-01-overlay-03 {
+	background-color: var(--mang-color-01-overlay-03);
+}
+	
+.bg-color-02-overlay-01 {
+	background-color: var(--mang-color-02-overlay-01);
+}
+.bg-color-02-overlay-02 {
+	background-color: var(--mang-color-02-overlay-02);
+}
+.bg-color-02-overlay-03 {
+	background-color: var(--mang-color-02-overlay-03);
+}
+	
+.bg-color-03-overlay-01 {
+	background-color: var(--mang-color-03-overlay-01);
+}
+.bg-color-03-overlay-02 {
+	background-color: var(--mang-color-03-overlay-02);
+}
+.bg-color-03-overlay-03 {
+	background-color: var(--mang-color-03-overlay-03);
+}
+
+
+.bg-color-gradient-01 {
+	background: 
+		linear-gradient(90deg, 
+		var(--mang-color-primary-01) 0%, 
+		var(--mang-color-primary-02) 100%);
+}
+.bg-color-gradient-02 {
+	background: 
+		linear-gradient(90deg, 
+		var(--mang-color-secondary-01) 0%, 
+		var(--mang-color-secondary-02) 35%, 
+		var(--mang-color-secondary-03) 100%);
+}
+.bg-color-gradient-03 {
+	background: 
+		linear-gradient(90deg, 
+		var(--mang-color-primary-01) 0%, 
+		var(--mang-color-secondary-03) 35%, 
+		var(--mang-color-secondary-05) 100%);
+}
+.bg-color-gradient-04 {
+	background: 
+		linear-gradient(90deg, 
+		var(--mang-color-secondary-03) 0%, 
+		var(--mang-color-secondary-04) 35%, 
+		var(--mang-color-secondary-05) 100%);
+}
+
+
+

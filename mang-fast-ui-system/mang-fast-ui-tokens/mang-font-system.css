@@ -1,0 +1,271 @@
+
+
+/*--------------------------------------*/
+/*------------BASE INTERFACE------------*/
+/*--------------------------------------*/
+
+:root {
+	
+	/*font-family*/
+	--mang-font-family-primary: 'New York Large', sans-serif;
+	--mang-font-family-secondary: 'SF Pro Display', sans-serif;
+
+	/*font-modifier*/
+	--mang-mod-font-size: 1.15;
+	--mang-mod-line-height-header: 1.25;
+	--mang-mod-line-height-secondary: 1.4;
+	
+	--mang-mod-margin-top: 1.1; 
+	--mang-mod-margin-bottom: 0.5;
+	
+	/*font-size*/
+	--mang-font-size-secondary-sm: 16px;
+	--mang-font-size-secondary-md: 18px;
+	--mang-font-size-secondary-lg: 20px;
+	
+	/*font-weight-*/
+	--mang-font-weight-black: 900;
+	--mang-font-weight-bold: 600;
+	--mang-font-weight-regular: 300;
+	
+}
+
+/*----------------------------*/
+/*--------system logic--------*/
+/*----------------------------*/
+
+@media (min-width: 0px) {
+	:root {
+		--mang-font-size-secondary: var(--mang-font-size-secondary-sm);
+	}
+}
+@media (min-width: 480px) {
+	:root {
+		--mang-font-size-secondary: var(--mang-font-size-secondary-md);
+	}
+}
+@media (min-width: 1280px) {
+	:root {
+		--mang-font-size-secondary: var(--mang-font-size-secondary-lg);
+	}
+}
+
+
+.mang-no-margin-top{
+	margin-top: 0;	
+}
+
+.mang-no-margin-bottom{
+	margin-bottom: 0;	
+}
+
+.mang-font-bold {
+	font-weight: var(--mang-font-weight-bold);
+}
+
+.mang-font-centered {
+	text-align: center;
+}
+
+.mang-font-italic {
+	font-style: italic;
+}
+
+.mang-font-color-black {
+	color: var(--mang-color-black);
+}
+
+.mang-font-color-white {
+	color: var(--mang-color-white);
+}
+
+.mang-font-color-disabled {
+	color: var(--mang-color-grey-03);
+}
+
+
+
+	
+:root {
+
+	/*---DYNAMIC---*/
+	/*Calculation basis for dynamic text scaling. Do not touch.*/
+	
+	/*font-size-d*/
+	--mang-font-size-body: var(--mang-font-size-secondary);		
+	--mang-font-size-h6: calc(var(--mang-font-size-body)*var(--mang-mod-font-size));
+	--mang-font-size-h5: calc(var(--mang-font-size-h6)*var(--mang-mod-font-size));
+	--mang-font-size-h4: calc(var(--mang-font-size-h5)*var(--mang-mod-font-size));
+	--mang-font-size-h3: calc(var(--mang-font-size-h4)*var(--mang-mod-font-size));
+	--mang-font-size-h2: calc(var(--mang-font-size-h3)*var(--mang-mod-font-size));
+	--mang-font-size-h1: calc(var(--mang-font-size-h2)*var(--mang-mod-font-size));
+	--mang-font-size-blockquote: var(--mang-font-size-h6);
+	--mang-font-size-caption:	calc(var(--mang-font-size-body)/var(--mang-mod-font-size));
+	--mang-font-size-endnote:	calc(var(--mang-font-size-caption)/var(--mang-mod-font-size));
+	--mang-font-size-footnote: calc(var(--mang-font-size-endnote)/var(--mang-mod-font-size));
+	
+	/*line-height-d*/
+	--mang-line-height-body: calc(var(--mang-font-size-secondary)*var(--mang-mod-line-height-secondary));
+	--mang-line-height-h6: calc(var(--mang-font-size-h6)*var(--mang-mod-line-height-header));
+	--mang-line-height-h5: calc(var(--mang-font-size-h5)*var(--mang-mod-line-height-header));
+	--mang-line-height-h4: calc(var(--mang-font-size-h4)*var(--mang-mod-line-height-header));
+	--mang-line-height-h3: calc(var(--mang-font-size-h3)*var(--mang-mod-line-height-header));
+	--mang-line-height-h2: calc(var(--mang-font-size-h2)*var(--mang-mod-line-height-header));
+	--mang-line-height-h1: calc(var(--mang-font-size-h1)*var(--mang-mod-line-height-header));
+	--mang-line-height-blockquote: calc(var(--mang-font-size-blockquote)*var(--mang-mod-line-height-secondary));
+	--mang-line-height-caption: calc(var(--mang-font-size-caption)*var(--mang-mod-line-height-secondary));
+	--mang-line-height-endnote: calc(var(--mang-font-size-endnote)*var(--mang-mod-line-height-secondary));
+	--mang-line-height-footnote: calc(var(--mang-font-size-footnote)*var(--mang-mod-line-height-secondary));	
+	
+	/*margin-top-d*/
+/*	--mang-margin-top-body: calc(var(--mang-font-size-body) * 1);*/
+	--mang-margin-top-h6: calc(var(--mang-font-size-h6) * var(--mang-mod-margin-top));
+	--mang-margin-top-h5: calc(var(--mang-font-size-h5) * var(--mang-mod-margin-top));
+	--mang-margin-top-h4: calc(var(--mang-font-size-h4) * var(--mang-mod-margin-top));
+	--mang-margin-top-h3: calc(var(--mang-font-size-h3) * var(--mang-mod-margin-top));
+	--mang-margin-top-h2: calc(var(--mang-font-size-h2) * var(--mang-mod-margin-top));
+	--mang-margin-top-h1: calc(var(--mang-font-size-h1) * var(--mang-mod-margin-top));
+	--mang-margin-top-blockquote: calc(var(--mang-font-size-blockquote) * var(--mang-mod-margin-top));
+	--mang-margin-top-caption: calc(var(--mang-font-size-caption) * var(--mang-mod-margin-top));
+	--mang-margin-top-endnote: var(--mang-space-xxs);
+	--mang-margin-top-footnote: var(--mang-space-xxs);
+	
+	/*margin-bottom-d*/
+	--mang-margin-bottom-body: calc(var(--mang-font-size-body) * var(--mang-mod-margin-bottom));
+	--mang-margin-bottom-h6: calc(var(--mang-font-size-h6) * var(--mang-mod-margin-bottom));
+	--mang-margin-bottom-h5: calc(var(--mang-font-size-h5) * var(--mang-mod-margin-bottom));
+	--mang-margin-bottom-h4: calc(var(--mang-font-size-h4) * var(--mang-mod-margin-bottom));
+	--mang-margin-bottom-h3: calc(var(--mang-font-size-h3) * var(--mang-mod-margin-bottom));
+	--mang-margin-bottom-h2: calc(var(--mang-font-size-h2) * var(--mang-mod-margin-bottom));
+	--mang-margin-bottom-h1: calc(var(--mang-font-size-h1) * var(--mang-mod-margin-bottom));
+	--mang-margin-bottom-blockquote: calc(var(--mang-font-size-blockquote) * var(--mang-mod-margin-bottom));
+	--mang-margin-bottom-caption: calc(var(--mang-font-size-caption) * var(--mang-mod-margin-bottom));
+	--mang-margin-bottom-endnote: var(--mang-space-xxs);
+	--mang-margin-bottom-footnote: var(--mang-space-xxs);
+		
+}
+
+
+/*---TEXT STYLES---*/
+
+
+h1, h2, h3 {
+	font-family: var(--mang-font-family-primary);
+	font-weight: var(--mang-font-weight-black);
+}
+
+h4, h5, h6 {
+	font-family: var(--mang-font-family-primary);
+	font-weight: var(--mang-font-weight-bold);
+}
+
+blockquote, caption {
+	font-weight: var(--mang-font-weight-bold);
+}
+
+p, .mang-blockquote, .mang-caption, .mang-footnote, .mang-endnote {
+	font-family: var(--mang-font-family-secondary);
+	font-weight: var(--mang-font-weight-regular);
+}
+
+
+h1 {
+	font-size: var(--mang-font-size-h1);
+	line-height: var(--mang-line-height-h1);
+	margin-top: var(--mang-margin-top-h1);
+	margin-bottom: var(--mang-margin-bottom-h1);
+
+}
+h2 {
+	font-size: var(--mang-font-size-h2);
+	line-height: var(--mang-line-height-h2);
+	margin-top: var(--mang-margin-top-h2);
+	margin-bottom: var(--mang-margin-bottom-h2);
+
+}
+h3 {
+	font-size: var(--mang-font-size-h3);
+	line-height: var(--mang-line-height-h3);
+	margin-top: var(--mang-margin-top-h3);
+	margin-bottom: var(--mang-margin-bottom-h3);
+}
+h4 {
+	font-size: var(--mang-font-size-h4);
+	line-height: var(--mang-line-height-h4);
+	margin-top: var(--mang-margin-top-h4);
+	margin-bottom: var(--mang-margin-bottom-h4);
+}
+h5 {
+	font-size: var(--mang-font-size-h5);
+	line-height: var(--mang-line-height-h5);
+	margin-top: var(--mang-margin-top-h5);
+	margin-bottom: var(--mang-margin-bottom-h5);
+}
+h6 {
+	font-size: var(--mang-font-size-h6);
+	line-height: var(--mang-line-height-h6);
+	font-weight: var(--mang-font-weight-black);
+	margin-top: var(--mang-margin-top-h6);
+	margin-bottom: var(--mang-margin-bottom-h6);
+}
+
+blockquote {
+	font-style: italic;
+	text-align: center;
+	margin-top: var(--mang-margin-top-h6);
+	margin-bottom: var(--mang-margin-top-h6);
+}
+
+blockquote .mang-blockquote {
+	font-family: var(--mang-font-family-primary);
+	font-weight: var(--mang-font-weight-bold);
+	margin: 0;
+}
+
+blockquote .mang-blockquote::before, blockquote .mang-blockquote::after {
+	content: '"';
+}
+
+.mang-blockquote {
+	font-size: var(--mang-font-size-blockquote);
+	line-height: var(--mang-line-height-blockquote);
+	margin-top: var(--mang-margin-top-blockquote);
+	margin-bottom: var(--mang-margin-bottom-blockquote);
+}
+p {
+	font-size: var(--mang-font-size-body);
+	line-height: var(--mang-line-height-body);
+	margin-top: var(--mang-margin-top-body);
+	margin-bottom: var(--mang-margin-bottom-body);
+}
+
+caption {
+	text-align: center;
+	margin-top: var(--mang-margin-top-caption);
+	margin-bottom: var(--mang-margin-top-caption);
+}
+
+caption .mang-caption {
+	font-family: var(--mang-font-family-primary);
+	font-weight: var(--mang-font-weight-bold);
+	margin: 0;
+}
+
+.mang-caption {
+	font-size: var(--mang-font-size-caption);
+	line-height: var(--mang-line-height-captiom);
+	margin-top: var(--mang-margin-top-captiom);
+	margin-bottom: var(--mang-margin-bottom-caption);
+}
+.mang-endnote {
+	font-size: var(--mang-font-size-endnote);
+	line-height: var(--mang-line-height-endnote);
+	margin-top: var(--mang-margin-top-endnote);
+	margin-bottom: var(--mang-margin-bottom-endnote);
+}
+.mang-footnote {
+	font-size: var(--mang-font-size-footnote);
+	line-height: var(--mang-line-height-footnote);
+	margin-top: var(--mang-margin-top-footnote);
+	margin-bottom: var(--mang-margin-bottom-footnote);
+}

@@ -1,0 +1,17 @@
+/*---------------------*/
+/*------GLOBALS--------*/
+/*---------------------*/
+
+*{
+/*	font-size: 0;*/
+	box-sizing: border-box;
+}
+
+html{
+	font-size: var(--mang-font-size-base-d);
+}
+	
+body {
+	font-family: var(--mang-font-family-base);
+	color: var(--mang-color-black);
+}

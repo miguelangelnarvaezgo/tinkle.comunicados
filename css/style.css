@@ -1,0 +1,123 @@
+/*---------------------------*/
+/*------CUSTOM STYLES-------*/
+/*---------------------------*/
+
+
+header{
+	
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-style: italic;
+}
+
+#title {
+	margin-top: var(--mang-space-sm);
+	margin-bottom: var(--mang-space-lg);
+}
+
+#tinkle-logo{
+	padding-top: var(--mang-space-xs);
+	padding-bottom: var(--mang-space-xs);
+	margin-bottom: var(--mang-space-xs);
+	background-color: transparent;
+	border-bottom: var(--mang-border-width-02) var(--mang-color-grey-03);
+}
+
+button {
+	color: #ffffff;
+	font-style: italic;
+	font-family: var(--mang-font-family-primary);
+	font-size: 16px;
+	padding-top: var(--mang-space-xxs);
+	padding-left: var(--mang-space-sm);
+	padding-right: var(--mang-space-sm);
+	padding-bottom: var(--mang-space-xxs);
+	border: none;
+	background-color: #93DE1F;
+	margin: 0;
+	margin-top: ;
+}
+
+fieldset {
+	padding: var(--mang-space-xxs);
+}
+
+form {
+	margin: var(--mang-space-xxl);
+}
+
+button:hover {
+	background-color: #829141;
+}
+
+
+@media (min-width: 0px) {
+
+}
+@media (min-width: 375px) {
+
+}
+@media (min-width: 480px) {
+
+}
+@media (min-width: 768px) {
+
+}
+@media (min-width: 1024px) {
+
+}
+@media (min-width: 1280px) {
+
+}
+@media (min-width: 1440px) {
+
+}
+@media (min-width: 1920px) {
+
+}
+
+
+footer{
+	width: 100%;
+	height: 50px;
+	position: relative;
+	bottom: 0;
+	background-color: black;
+	margin-top: var(--mang-space-xl);
+}
+
+
+
+
+.box-image{
+	border-radius: 5px;
+	border: solid 1px;
+	border-color: var(--mang-color-grey-03);
+	height: 150px;
+	margin-bottom: var(--mang-space-xxs);
+	background-color: var(--mang-color-grey-04);
+}
+
+.box-info {
+	margin-bottom: var(--mang-space-sm);
+}
+
+.box-shadow{
+	height: 140px;
+	background-color: var(--mang-color-white);
+	margin-bottom: var(--mang-space-xl);
+}
+
+.text-footer{
+	padding-top: 16px;
+}
+
+
+.divider {
+	height: 1px;
+	width: 100%;
+	background-color: var(--mang-color-grey-01);
+	margin-top: var(--mang-space-sm);
+	margin-bottom: var(--mang-space-sm);
+}
