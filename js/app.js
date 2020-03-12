@@ -12,6 +12,50 @@ let int4 = 200;
 let int5 = 400;
 let int6 = 800;
 
+const legend = (int1, int2, int3, int4, int5, int6) => {
+	
+	let colorPalet = ['', color1, color2, color3, color4, color5, color6];		
+	let int = ['', int1, int2, int3, int4, int5, int6];	
+		
+	for (let i = 1; i < 7; i++) {
+		let color = document.getElementById(`color${i}`).setAttribute('fill', colorPalet[i]);
+		let interval = document.getElementsByClassName(`int${i}`);
+		for (let j = 0; j < interval.length; j++) {
+			interval[j].innerHTML = int[i].toString();
+		}
+//					console.log(interval);
+	}
+}
+
+const customIntervals = (int, valor) =>{
+	console.log(int);
+	console.log(valor);
+	
+	switch (int) {
+		case 1:
+			int1 = valor;
+			break;
+		case 2:
+			int2 = valor;
+			break;
+		case 3:
+			int3 = valor;
+			break;
+		case 4:
+			int4 = valor;
+			break;
+		case 5:
+			int5 = valor;
+			break;
+		case 6:
+			int6 = valor;
+			break;
+		default:
+			break;
+	}
+	legend(int1, int2, int3, int4, int5, int6);
+}
+
 //https://gist.github.com/johnvilsack/ea991a2645c53209fd4e
 
 function handleFiles(files) {

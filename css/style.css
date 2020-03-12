@@ -3,52 +3,27 @@
 /*---------------------------*/
 
 
-header{
-	
-}
-
 h1, h2, h3, h4, h5, h6 {
 	font-style: italic;
 }
 
-#title {
-	margin-top: var(--mang-space-sm);
-	margin-bottom: var(--mang-space-lg);
-}
-
-#tinkle-logo{
-	padding-top: var(--mang-space-xs);
-	padding-bottom: var(--mang-space-xs);
-	margin-bottom: var(--mang-space-xs);
-	background-color: transparent;
-	border-bottom: var(--mang-border-width-02) var(--mang-color-grey-03);
-}
-
-button {
-	color: #ffffff;
-	font-style: italic;
-	font-family: var(--mang-font-family-primary);
-	font-size: 16px;
-	padding-top: var(--mang-space-xxs);
-	padding-left: var(--mang-space-sm);
-	padding-right: var(--mang-space-sm);
-	padding-bottom: var(--mang-space-xxs);
-	border: none;
-	background-color: #93DE1F;
-	margin: 0;
-	margin-top: ;
-}
-
 fieldset {
-	padding: var(--mang-space-xxs);
+	align-items: center;
+	text-align: center;
+	padding: var(--mang-space-sm);
 }
 
 form {
 	margin: var(--mang-space-xxl);
 }
 
-button:hover {
-	background-color: #829141;
+footer{
+	width: 100%;
+	height: 50px;
+	position: relative;
+	bottom: 0;
+	background-color: black;
+	margin-top: var(--mang-space-xl);
 }
 
 
@@ -78,35 +53,17 @@ button:hover {
 }
 
 
-footer{
-	width: 100%;
-	height: 50px;
-	position: relative;
-	bottom: 0;
-	background-color: black;
-	margin-top: var(--mang-space-xl);
+#title {
+	margin-top: var(--mang-space-sm);
+	margin-bottom: var(--mang-space-lg);
 }
 
-
-
-
-.box-image{
-	border-radius: 5px;
-	border: solid 1px;
-	border-color: var(--mang-color-grey-03);
-	height: 150px;
-	margin-bottom: var(--mang-space-xxs);
-	background-color: var(--mang-color-grey-04);
-}
-
-.box-info {
-	margin-bottom: var(--mang-space-sm);
-}
-
-.box-shadow{
-	height: 140px;
-	background-color: var(--mang-color-white);
-	margin-bottom: var(--mang-space-xl);
+#tinkle-logo{
+	padding-top: var(--mang-space-xs);
+	padding-bottom: var(--mang-space-xs);
+	margin-bottom: var(--mang-space-xs);
+	background-color: transparent;
+	border-bottom: var(--mang-border-width-02) var(--mang-color-grey-03);
 }
 
 .text-footer{
