@@ -16,6 +16,7 @@ const legend = (int1, int2, int3, int4, int5, int6) => {
 	
 	let colorPalet = ['', color1, color2, color3, color4, color5, color6];		
 	let int = ['', int1, int2, int3, int4, int5, int6];	
+	console.log(int);
 		
 	for (let i = 1; i < 7; i++) {
 		let color = document.getElementById(`color${i}`).setAttribute('fill', colorPalet[i]);
@@ -33,22 +34,22 @@ const customIntervals = (int, valor) =>{
 	
 	switch (int) {
 		case 1:
-			int1 = valor;
+			int1 = Number(valor);
 			break;
 		case 2:
-			int2 = valor;
+			int2 = Number(valor);
 			break;
 		case 3:
-			int3 = valor;
+			int3 = Number(valor);
 			break;
 		case 4:
-			int4 = valor;
+			int4 = Number(valor);
 			break;
 		case 5:
-			int5 = valor;
+			int5 = Number(valor);
 			break;
 		case 6:
-			int6 = valor;
+			int6 = Number(valor);
 			break;
 		default:
 			break;
@@ -116,32 +117,32 @@ const intervals = (optArray) => {
 		
 		if (optArray[i][1] >= 0 && optArray[i][1] <= int1) {
 			
-			console.log(`estamos 0-${int1}`);
+//			console.log(`estamos 0-${int1}`);
 			drawMap(optArray[i][0], color1);
 			
 		} else if (optArray[i][1] > int1 && optArray[i][1] <= int2) {
 			
-			console.log(`estamos ${int1}-${int2}`);
+//			console.log(`estamos ${int1}-${int2}`);
 			drawMap(optArray[i][0], color2);
 			
 		} else if (optArray[i][1] > int2 && optArray[i][1] <= int3) {
 			
-			console.log(`estamos ${int2}-${int3}`);
+//			console.log(`estamos ${int2}-${int3}`);
 			drawMap(optArray[i][0], color3);
 			
 		} else if (optArray[i][1] > int3 && optArray[i][1] <= int4) {
 			
-			console.log(`estamos ${int3}-${int4}`);
+//			console.log(`estamos ${int3}-${int4}`);
 			drawMap(optArray[i][0], color4);
 			
 		} else if (optArray[i][1] > int4 && optArray[i][1] <= int5) {
 			
-			console.log(`estamos ${int4}-${int5}`);
+//			console.log(`estamos ${int4}-${int5}`);
 			drawMap(optArray[i][0], color5);
 			
 		} else if (optArray[i][1] > int5 && optArray[i][1] <= int6) {
 			
-			console.log(`estamos ${int5}-${int6}`);
+//			console.log(`estamos ${int5}-${int6}`);
 			drawMap(optArray[i][0], color6);
 			
 		}
