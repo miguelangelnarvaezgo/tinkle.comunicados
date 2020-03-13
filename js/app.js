@@ -12,10 +12,33 @@ let int4 = 200;
 let int5 = 400;
 let int6 = 800;
 
+let arrayData = [
+	["andalucia", "0"],
+	["aragon", "0"],
+	["asturias", "0"],
+	["baleares", "0"],
+	["canarias", "0"],
+	["cantabria", "0"],
+	["castilla-la-mancha", "0"],
+	["castilla-y-leon", "0"],
+	["catalunya", "0"],
+	["ceuta", "0"],
+	["valencia", "0"],
+	["extremadura", "0"],
+	["galicia", "0"],
+	["madrid", "0"],
+	["melilla", "0"],
+	["murcia", "0"],
+	["navarra", "0"],
+	["pais-vasco", "0"],
+	["la-rioja", "0"]
+	];
+	
 const legend = (int1, int2, int3, int4, int5, int6) => {
 	
 	let colorPalet = ['', color1, color2, color3, color4, color5, color6];		
 	let int = ['', int1, int2, int3, int4, int5, int6];	
+	
 	console.log(int);
 		
 	for (let i = 1; i < 7; i++) {
@@ -24,13 +47,12 @@ const legend = (int1, int2, int3, int4, int5, int6) => {
 		for (let j = 0; j < interval.length; j++) {
 			interval[j].innerHTML = int[i].toString();
 		}
-//					console.log(interval);
 	}
 }
 
 const customIntervals = (int, valor) =>{
-	console.log(int);
-	console.log(valor);
+	//console.log(int);
+	//console.log(valor);
 	
 	switch (int) {
 		case 1:
@@ -55,9 +77,43 @@ const customIntervals = (int, valor) =>{
 			break;
 	}
 	legend(int1, int2, int3, int4, int5, int6);
+	drawDataInMap(arrayData);
 }
 
-//https://gist.github.com/johnvilsack/ea991a2645c53209fd4e
+const drawDataInMap = (optArray) => {
+	
+	for (let i = 0; i < optArray.length; i++) {
+		
+		if (optArray[i][1] >= 0 && optArray[i][1] <= int1) {
+			drawMap(optArray[i][0], color1);
+			
+		} else if (optArray[i][1] > int1 && optArray[i][1] <= int2) {
+
+			drawMap(optArray[i][0], color2);
+			
+		} else if (optArray[i][1] > int2 && optArray[i][1] <= int3) {
+			drawMap(optArray[i][0], color3);
+			
+		} else if (optArray[i][1] > int3 && optArray[i][1] <= int4) {
+			drawMap(optArray[i][0], color4);
+			
+		} else if (optArray[i][1] > int4 && optArray[i][1] <= int5) {
+			drawMap(optArray[i][0], color5);
+			
+		} else if (optArray[i][1] > int5 && optArray[i][1] <= int6) {
+			drawMap(optArray[i][0], color6);
+			
+		}
+	}
+}
+
+const drawMap = (ccaa, color) => {
+	let obj = document.getElementById(ccaa)
+	obj.setAttribute('fill', color);
+}
+
+// ---------------------------fuente: https://gist.github.com/johnvilsack/ea991a2645c53209fd4e
+//Toma el CSV en el input upload file y genera un array bidimensional con los datos
 
 function handleFiles(files) {
 	// Check for the various File API support.
@@ -95,12 +151,13 @@ function processData(csv) {
 	while (allTextLines.length) {
 		lines.push(allTextLines.shift().split(','));
 	}
-//	console.log(lines);
 //	drawOutput(lines);
-	let lolo = separationValues(lines);
-	intervals(lolo);
+	arrayData = separationValues(lines); //custom
+	drawDataInMap(arrayData); //custom
 }
 
+
+//custom: Añado función para separar el array en dos dimensiones.
 const separationValues = (arrayLines) => {
 	let result = {}
 	
@@ -109,47 +166,7 @@ const separationValues = (arrayLines) => {
 		arrayLines[i] = line.split(';');
 	}
 	return arrayLines;
+	console.log(arrayLines);
 }
 
-const intervals = (optArray) => {
-	
-	for (let i = 0; i < optArray.length; i++) {
-		
-		if (optArray[i][1] >= 0 && optArray[i][1] <= int1) {
-			
-//			console.log(`estamos 0-${int1}`);
-			drawMap(optArray[i][0], color1);
-			
-		} else if (optArray[i][1] > int1 && optArray[i][1] <= int2) {
-			
-//			console.log(`estamos ${int1}-${int2}`);
-			drawMap(optArray[i][0], color2);
-			
-		} else if (optArray[i][1] > int2 && optArray[i][1] <= int3) {
-			
-//			console.log(`estamos ${int2}-${int3}`);
-			drawMap(optArray[i][0], color3);
-			
-		} else if (optArray[i][1] > int3 && optArray[i][1] <= int4) {
-			
-//			console.log(`estamos ${int3}-${int4}`);
-			drawMap(optArray[i][0], color4);
-			
-		} else if (optArray[i][1] > int4 && optArray[i][1] <= int5) {
-			
-//			console.log(`estamos ${int4}-${int5}`);
-			drawMap(optArray[i][0], color5);
-			
-		} else if (optArray[i][1] > int5 && optArray[i][1] <= int6) {
-			
-//			console.log(`estamos ${int5}-${int6}`);
-			drawMap(optArray[i][0], color6);
-			
-		}
-	}
-}
-
-const drawMap = (ccaa, color) => {
-	let obj = document.getElementById(ccaa)
-	obj.setAttribute('fill', color);
-}
+//--------------------------------------------------
