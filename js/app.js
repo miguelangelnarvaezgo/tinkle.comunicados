@@ -5,12 +5,12 @@ let color4 = '#5B8122';
 let color5 = '#405027';
 let color6 = '#1E2710';
 
-let int1 = 10;
-let int2 = 50;
-let int3 = 100;
-let int4 = 200;
-let int5 = 400;
-let int6 = 800;
+let int1 = 50;
+let int2 = 100;
+let int3 = 500;
+let int4 = 1000;
+let int5 = 1500;
+//let int6 = 800;
 
 let arrayData = [
 	["andalucia", "0"],
@@ -34,14 +34,17 @@ let arrayData = [
 	["la-rioja", "0"]
 	];
 	
-const legend = (int1, int2, int3, int4, int5, int6) => {
+//const legend = (int1, int2, int3, int4, int5, int6) => {
+const legend = (int1, int2, int3, int4, int5) => {
 	
 	let colorPalet = ['', color1, color2, color3, color4, color5, color6];		
-	let int = ['', int1, int2, int3, int4, int5, int6];	
+//	let int = ['', int1, int2, int3, int4, int5, int6];	
+	let int = ['', int1, int2, int3, int4, int5];	
 	
 	console.log(int);
 		
-	for (let i = 1; i < 7; i++) {
+//	for (let i = 1; i < 7; i++) {
+	for (let i = 1; i < 6; i++) {
 		let color = document.getElementById(`color${i}`).setAttribute('fill', colorPalet[i]);
 		let interval = document.getElementsByClassName(`int${i}`);
 		for (let j = 0; j < interval.length; j++) {
@@ -76,7 +79,8 @@ const customIntervals = (int, valor) =>{
 		default:
 			break;
 	}
-	legend(int1, int2, int3, int4, int5, int6);
+//	legend(int1, int2, int3, int4, int5, int6);
+	legend(int1, int2, int3, int4, int5);
 	drawDataInMap(arrayData);
 }
 
